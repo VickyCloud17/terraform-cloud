@@ -1,4 +1,22 @@
-myregion = "ap-south-1"
-myaccess_key = " your-access-key"
-secret_key = "your-secret-key"
-ami_id = "ami-085386e29e44dacd7"
+variable "myregion" {
+  description = "AWS region"
+  type        = string
+}
+
+variable "myaccess_key" {
+  description = "AWS access key"
+  type        = string
+  sensitive   = true
+}
+
+variable "secret_key" {
+  description = "AWS secret key"
+  type        = string
+  sensitive   = true
+}
+
+variable "ami_id" {
+  description = "AMI ID to use for EC2 instance"
+  type        = string
+}
+
